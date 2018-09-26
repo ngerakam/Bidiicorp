@@ -1,0 +1,137 @@
+<?php
+session_start();
+if($_SESSION['name']==null){
+    header("location: login.html");
+}
+?>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <title>BIDIIcorp.
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toogle="collapse" data-target=".nav-collapse">
+                    <span class="icon-th-list"></span>
+                </a>
+                <a href="#" class="brand" font=10px;>
+                    <a>
+                            <img src="pics/bidii.png" width="60" height="50" />
+                        </a>
+                </a>
+            </div>
+            <div class="nav-collapse collapse">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="hero-unit">
+
+    </div>
+    <div class="container" align="center">
+    	<div class="row-fluid">
+    		<div class="span8">
+          <form action="info.php" method="post" enctype="multipart/form-data">
+                    <ul>
+                    	<li> <label for="pic" required></label>
+                            <input type="file" name="pic"  ></li>
+                    	<li> <label for="phone" required>PHONE:</label>
+                            <input type="text" name="phone" size="30" minlength="10" maxlength="10" placeholder="07**34***8"></li>
+                        <li><label for="objective">OBJECTIVE:</label>
+                            <textarea name="objective" placeholder="Type your objectives here..." minlength="200"></textarea></li>
+                        <li> <button onclick="myfunction()">SUBMIT</button> </li>
+
+                    </ul>
+
+                </form>
+                </div>
+                </div>
+                <div class="span4">
+                	<p>
+                		<?php echo $_SESSION['name']; ?>
+                	</p>
+                </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+    <script>
+        myfunction() {
+            var inpobj = document.getElementById('id1');
+            if (inpobj.chekvalidity() == false) {
+                document.getElementById("demo").innerHTML = inpobj.validationMessage;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+<style type="text/css">
+    body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+    }
+    
+    #navlist {
+        width: 250px;
+        padding-left: 0;
+        margin-left: 0;
+        border-bottom: 1px solid #cccccc;
+    }
+    
+    #navlist li {
+        list-style: none;
+        margin: 0;
+        border-top: 1px solid #666666;
+        line-height: 200%;
+    }
+    
+    #contacts {
+        text-align: center;
+        align-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font: 22px;
+    }
+    
+    #one {
+        background-color: 0;
+        text-align: center;
+    }
+    
+    form {
+        margin: auto;
+        text-align: center;
+    }
+    
+    form li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        cursor: pointer;
+        color: #292929;
+        font-family: sans-serif;
+    }
+    
+    textarea {
+        width: 200px;
+        height: 300px;
+    }
+</style>

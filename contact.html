@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <title>Bidiicorp.</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light sicky-top">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button class="btn btn-navbar" collapsed data-toogle="collapse" data-target=".nav-collapse" id="#menuitem">
+              <span class="icon-th-list"></span>
+            </button>
+                    <a href="#" class="brand">
+                       <a>
+                            <img src="pics/bidii.png" width="60" height="50" />
+                        </a>
+                    </a>
+                </div>
+                <div class="nav-collapse collapse" id="menuitem">
+                    
+                </div>
+            </div>
+    </nav>
+    <div class="hero-unit" align="center">
+     <h2>Contact us: </h2>
+    </div>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span8" id="table">
+                <p>
+                    Type your comments or Questions on the input area below.
+                </p>
+
+                <form action="" method="get">
+                    <ul>
+                        <li> <label for="EMAIL" required>EMAIL:</label>
+                            <input type="email" name="Eamil" size="30" minlength="8" maxlength="50" placeholder="Email address"></li>
+                        <li><label for="comments">COMMENTS:</label>
+                            <textarea name="comments" placeholder="Type your comments here..."></textarea></li>
+                        <li> <button onclick="myfunction()">SUBMIT</button> </li>
+
+                    </ul>
+
+                </form>
+            </div>
+            <div class="span4">
+                <div>
+                    <img src="pics/cc.jfif">
+                    <p>
+                        you can contact us on:</p></br>
+                        <p>Tel:+254918797</p></br>
+                        <p>Email:support@Bidiicorp.com</p></br>
+                        <p>PostalCode:Po Box 106 Nakuru.
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="one">
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script>
+        myfunction() {
+            var inpobj = document.getElementById('id1');
+            if (inpobj.chekvalidity() == false) {
+                document.getElementById("demo").innerHTML = inpobj.validationMessage;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<style type="text/css">
+    body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+    }
+    
+    #navlist {
+        width: 250px;
+        padding-left: 0;
+        margin-left: 0;
+        border-bottom: 1px solid #cccccc;
+    }
+    
+    #navlist li {
+        list-style: none;
+        margin: 0;
+        border-top: 1px solid #666666;
+        line-height: 200%;
+    }
+    
+    #contacts {
+        text-align: center;
+        align-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font: 22px;
+    }
+    
+    #one {
+        background-color: 0;
+        text-align: center;
+    }
+    
+    form {
+        margin: auto;
+        text-align: center;
+    }
+    
+    form li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        cursor: pointer;
+        color: #292929;
+        font-family: sans-serif;
+    }
+    
+    textarea {
+        width: 200px;
+        height: 300px;
+    }
+</style>

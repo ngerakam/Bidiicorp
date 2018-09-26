@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0>
+    <title>BIDIIcrop.</title>
+    <style type="text/css">
+    body {
+        margin: auto;
+        text-align: center;
+    }
+    
+    form li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        cursor: pointer;
+        color: #292929;
+        font-family: sans-serif;
+    }
+    #one {
+        background-color: 0;
+        text-align: center;
+    }
+    
+    textarea {
+        width: 200px;
+        height: 300px;
+    }
+</style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+</head>
+
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toogle="collapse" data-target=".nav-collapse">
+                    <span class="icon-th-list"></span>
+                </a>
+                <a href="#" class="brand" font=10px;>
+                   <a>
+                            <img src="pics/bidii.png" width="60" height="50" />
+                        </a>
+                </a>
+            </div>
+            <div class="nav-collapse collapse">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="hero-unit">
+        <h1>
+           <a>
+                            <img src="pics/bidii.png" width="60" height="50" />
+                        </a>
+        </h1>
+        <form action="signup.php" method="post">
+            <ul>
+
+                <li><label for="NAME" required>FULLNAME:</label>
+                    <input id="id1" type="TEXT" name="name" size="30" minlength="5" maxlength="50"></li>
+                <li><label for="USERNAME" required>USERNAME:</label>
+                    <input id="id1" type="TEXT" name="username" size="30" minlength="5" maxlength="50"></li>
+                <li> <label for="inputEmail">EMAIL:</label>
+                    <input id="id1" type="Email" name="inputEmail" size="30" minlength="5" maxlength="50" autofocus=""></li>
+                <li> <label for="AREA">AREA:</label>
+                    <input type="text" name="AREA" size="30" minlength="2" maxlength="30">
+                    <li><label for="ID-NUMBER" required>ID NUMBER:</label>
+                        <input id="id1" type="text" name="ID-NUMBER" size="30" minlength="8" maxlength="8"></li>
+                    </br>
+
+
+                    <li> <button onclick="myfunction()" name="submit">SUBMIT</button>
+
+            </ul>
+
+        </form>
+                <div id="one">
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        myfunction() {
+            var inpobj = document.getElementById('id1');
+            if (inpobj.chekvalidity() == false) {
+                document.getElementById("demo").innerHTML = inpobj.validationMessage;
+            }
+        };
+    </script>
+</body>
+
+</html>
